@@ -11,7 +11,7 @@ module.exports = (req, res) => {
     "profile": {
       "status_text": "Lunch",
       "status_emoji": ":pizza:",
-      "status_expiration": 1605647520,
+      "status_expiration": 1605648142,
     }
   }
   fetch('https://slack.com/api/users.profile.set', {
