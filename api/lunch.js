@@ -27,6 +27,6 @@ module.exports = (req, res) => {
   .then(res => res.json())
   .then(json => {
     console.log(res.json(json))
-    res.json(json)
+    return res.json(json)
   });
 }
