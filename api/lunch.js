@@ -25,6 +25,4 @@ module.exports = (req, res) => {
   })
   .then(res => res.json())
   .then(json => res.json(json));
-
-  console.log('lunch!')
 }
