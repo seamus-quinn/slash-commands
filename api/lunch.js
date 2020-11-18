@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 module.exports = (req, res) => {
-  const date = new Date()
+  const date = Date.now()
   const expiration = date + 1000 * 60 * 60
 
   console.log(date)
