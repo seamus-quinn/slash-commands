@@ -6,13 +6,13 @@ module.exports = (req, res) => {
 
   console.log(process.env.SLACK_XOXP_TOKEN)
 
-  console.log(expiration)
+  console.log(new Date(expiration))
 
   const body = {
     "profile": {
       "status_text": "Lunch",
       "status_emoji": ":pizza:",
-      "status_expiration": expiration,
+      // "status_expiration": expiration,
     }
   }
   fetch('https://slack.com/api/users.profile.set', {
