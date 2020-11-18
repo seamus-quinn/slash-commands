@@ -2,18 +2,14 @@ const fetch = require('node-fetch');
 
 module.exports = (req, res) => {
   const date = new Date()
-  const expiration = date.setHours(date.getHours() + 1)
-  const expirationTwo = date.setSeconds(date.getSeconds() + 30)
-
-  console.log(process.env.SLACK_XOXP_TOKEN)
-
-  console.log(new Date(expirationTwo))
+  var t = new Date();
+  const expiration = date.setSeconds(date.getSeconds() + 10);
 
   const body = {
     "profile": {
       "status_text": "Lunch",
       "status_emoji": ":pizza:",
-      // "status_expiration": expiration,
+      "status_expiration": expiration,
     }
   }
   fetch('https://slack.com/api/users.profile.set', {
