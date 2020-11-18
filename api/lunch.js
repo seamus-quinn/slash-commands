@@ -2,7 +2,9 @@ const fetch = require('node-fetch');
 
 module.exports = (req, res) => {
   const date = new Date()
-  const expiration = date.setSeconds(date.getSeconds() + 10);
+  const expiration = date.getMinutes(date.getMinutes() + 1);
+
+  console.log(expiration)
 
   const body = {
     "profile": {
