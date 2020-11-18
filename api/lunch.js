@@ -3,10 +3,11 @@ const fetch = require('node-fetch');
 module.exports = (req, res) => {
   const date = new Date()
   const expiration = date.setHours(date.getHours() + 1)
+  const expirationTwo = date.setSeconds(date.getSeconds() + 30)
 
   console.log(process.env.SLACK_XOXP_TOKEN)
 
-  console.log(new Date(expiration))
+  console.log(new Date(expirationTwo))
 
   const body = {
     "profile": {
